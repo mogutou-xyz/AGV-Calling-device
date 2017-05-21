@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/PNG114.png</file>
+        <file>image/subway_status_118px_1118816_easyicon.net.png</file>
+        <file>image/light_bulb.png</file>
+        <file>image/calling.png</file>
+        <file>image/error.png</file>
+        <file>image/OK.png</file>
+        <file>image/PNG102.png</file>
+        <file>image/telephone.png</file>
+        <file>image/arrow_left.png</file>
+    </qresource>
+</RCC>
