@@ -38,14 +38,14 @@ bool Widget::initUI()
     setWindowFlags(Qt::FramelessWindowHint);
     QGridLayout* gLayout = new QGridLayout(this);
     configBtn.setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-    configBtn.setIcon(QIcon(":/image/PNG114.png"));
+    configBtn.setIcon(QIcon(":image/Work_256px_1077397_easyicon.net.png"));
     configBtn.setIconSize(QSize(150,150));
 
-    configBtn.setText(tr("配置工位号"));
+    configBtn.setText("配置工位号");
     configBtn.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
     openCallingBtn.setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
-    openCallingBtn.setIcon(QIcon(":/image/PNG102.png"));
+    openCallingBtn.setIcon(QIcon(":image/Processing_203px_1200028_easyicon.net.png"));
     openCallingBtn.setIconSize(QSize(150,150));
 
     openCallingBtn.setText(tr("打开呼叫器"));
@@ -97,14 +97,10 @@ void Widget::Open_CallingDevice()
     QFile file(QDir::currentPath()+ "/station_number.txt");
     if( file.open(QIODevice::ReadOnly | QIODevice::Text) )
     {
-
         QTextStream in(&file);
-
         while( !in.atEnd() )
         {
-
             station_number = in.readAll().toInt();
-
             Workstation* workstation =  Workstation:: NewWorkstation( station_number);
             if(workstation!= NULL)
             {
@@ -113,7 +109,5 @@ void Widget::Open_CallingDevice()
             }
         }
         file.close();
-
     }
-
 }

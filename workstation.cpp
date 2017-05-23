@@ -11,7 +11,6 @@
 Workstation::Workstation( char number,QDialog *parent) :
     QDialog(parent),stateBtn(this),CompleteBtn(this)
 {  
-
     station_number = number;
     initUI();
     connect(&ledBtn,SIGNAL(clicked()),this,SLOT(close()));
@@ -23,7 +22,7 @@ bool Workstation::initUI()
     bool ret =true;
     setWindowFlags(Qt::FramelessWindowHint);
     label.setText(tr("AGV呼叫器"));
-    label.setFont(QFont("unifont", 50, QFont::Black));
+    label.setFont(QFont("wqy-microhei", 30, QFont::Black));
 
     ledBtn.setStyleSheet("QPushButton{border:0px;}");
     ledBtn.setIcon(QPixmap("image/arrow_left.png"));
@@ -35,9 +34,8 @@ bool Workstation::initUI()
 
     stateBtn.setEnabled(false);
     stateBtn.setStyleSheet("QPushButton{border:0px;}");
-    //stateBtn.setEnabled(false);
     stateBtn.setText(QString::number(station_number)+"号工位");
-    stateBtn.setFont(QFont("unifont", 40, QFont::Bold));
+    stateBtn.setFont(QFont("wqy-microhei", 20, QFont::Bold));
     stateBtn.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
     //CompleteBtn.setStyleSheet("QPushButton{border:0px;}");
